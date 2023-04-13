@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Defi Site Text Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .text__wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .no {
+        padding-right: 15px;
+      }
+
+      .text__wrapper h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 48px;
+        line-height: 1.5em;
+        text-transform: capitalize;
+        color: #cf0a2c;
+      }
+
+      .animated__portion {
+        position: relative;
+      }
+
+      .animated__portion h3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #t__1 {
+        animation: animated__portion__1 5s ease-in-out infinite;
+      }
+
+      @keyframes animated__portion__1 {
+        0%,
+        30% {
+          opacity: 1;
+        }
+
+        31%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #t__2 {
+        animation: animated__portion__2 5s ease-in-out infinite;
+      }
+
+      @keyframes animated__portion__2 {
+        0%,
+        32% {
+          opacity: 0;
+        }
+
+        33%,
+        66% {
+          opacity: 1;
+        }
+
+        67%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      #t__3 {
+        animation: animated__portion__3 5s ease-in-out infinite;
+      }
+
+      @keyframes animated__portion__3 {
+        0%,
+        67% {
+          opacity: 0;
+        }
+
+        68%,
+        98% {
+          opacity: 1;
+        }
+
+        99%,
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text__wrapper">
+      <div class="no">
+        <h3>no</h3>
+      </div>
+      <div class="animated__portion">
+        <h3 id="t__1">registration.</h3>
+        <h3 id="t__2">fees.</h3>
+        <h3 id="t__3">spread.</h3>
+      </div>
+    </div>
+  </body>
+</html>
